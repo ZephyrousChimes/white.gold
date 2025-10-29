@@ -6,10 +6,15 @@ const nextConfig: NextConfig = {
   pageExtensions: ['mdx', 'ts', 'tsx'],
   
   experimental: {
-    mdxRs: true
+    mdxRs: false
   }
 };
 
-const withMDX = createMDX({});
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [['remark-math']],
+    rehypePlugins: [['rehype-katex']],
+  }
+});
 
 export default withMDX(nextConfig);

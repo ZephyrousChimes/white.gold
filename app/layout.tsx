@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import 'katex/dist/katex.min.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
                   Strava
                 </a>
                 <div className="flex gap-6 text-sm">
-                  <a href="/#topics" className="text-slate-400 hover:text-slate-100 transition-colors">Topics</a>
+                  <a href="/streaming" className="text-slate-400 hover:text-slate-100 transition-colors">Topics</a>
                   <a href="/#about" className="text-slate-400 hover:text-slate-100 transition-colors">About</a>
                 </div>
               </div>

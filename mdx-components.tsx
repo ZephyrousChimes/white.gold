@@ -1,4 +1,5 @@
 import type { MDXComponents } from 'mdx/types'
+import Mermaid from './app/Mermaid'
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -45,11 +46,20 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </li>
     ),
-    code: ({ children }) => (
-      <code className="px-2 py-1 rounded bg-slate-800 text-cyan-400 text-sm font-mono">
-        {children}
-      </code>
-    ),
+    code: ({ children, className }) => {
+      // Check if this is a mermaid code block
+      const language = className?.replace('language-', '')
+      
+      if (language === 'mermaid' && typeof children === 'string') {
+        return <Mermaid chart={children} />
+      }
+      
+      return (
+        <code className="px-2 py-1 rounded bg-slate-800 text-cyan-400 text-sm font-mono">
+          {children}
+        </code>
+      )
+    },
     pre: ({ children }) => (
       <pre className="bg-slate-900 rounded-lg p-6 overflow-x-auto mb-6 border border-slate-700">
         {children}

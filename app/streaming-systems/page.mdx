@@ -64,7 +64,7 @@ import Content from '../content';
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
               #### Optimal and General Out-of-Order Sliding-Window Aggregation
             </h3>
-            <p className="text-sm text-slate-500 mb-4">IBM Research, 2019</p>
+            <p className="text-sm text-slate-500 mb-4">VLDB, 2019</p>
             <p className="text-slate-400 leading-relaxed">
               A foundational paper that formalizes sliding-window aggregation under out-of-order arrivals,
               proving optimal bounds and introducing the FiBA algorithm for efficient, general-purpose
@@ -83,6 +83,36 @@ import Content from '../content';
         </div>
       </div>
     </a>
+
+    <a href="/streaming-systems/daba" 
+       className="group p-8 rounded-2xl bg-gradient-to-br from-slate-900/50 to-slate-800/30 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10">
+      <div className="space-y-4">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-cyan-400 transition-colors">
+              #### Low-Latency Sliding-Window Aggregation in Worst-Case Constant Time
+            </h3>
+            <p className="text-sm text-slate-500 mb-4">VLDB, 2017</p>
+            <p className="text-slate-400 leading-relaxed">
+              DABA shows how to maintain sliding-window aggregation with **true worst-case constant time**
+              per operation by spreading reversal work eagerly, eliminating latency spikes caused by
+              deferred computation.
+            </p>
+          </div>
+          <div className="p-3 rounded-lg bg-cyan-500/10 text-cyan-400 group-hover:bg-cyan-500/20 transition-colors flex-shrink-0">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs">Real-Time</span>
+          <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs">Continuous Analytics</span>
+          <span className="px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-300 text-xs">(de)-amortization</span>
+        </div>
+      </div>
+    </a>
+
 
     {/* Template for future papers - commented out */}
     {/* 

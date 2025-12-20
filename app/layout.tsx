@@ -27,7 +27,7 @@ export default function RootLayout({
                   Strava
                 </a>
                 <div className="flex gap-6 text-sm">
-                  <a href="/streaming" className="text-slate-400 hover:text-slate-100 transition-colors">Topics</a>
+                  <a href="/streaming-systems" className="text-slate-400 hover:text-slate-100 transition-colors">Topics</a>
                   <a href="/#about" className="text-slate-400 hover:text-slate-100 transition-colors">About</a>
                 </div>
               </div>
